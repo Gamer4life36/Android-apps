@@ -58,6 +58,26 @@ Standard Gradle Android project:
 Requires Android Studio (or the Android SDK + JDK 17). `local.properties` is generated
 locally and is not committed.
 
+### Release signing
+
+Signing credentials are **not** stored in `build.gradle.kts`. Instead, the release
+`signingConfig` reads them from a `keystore.properties` file at the project root, which
+is **gitignored** and must never be committed.
+
+To produce a signed release build, create `keystore.properties` next to
+`settings.gradle.kts` (copy `keystore.properties.example` and fill in your values):
+
+```properties
+storeFile=../screenslayer-release.jks
+storePassword=YOUR_STORE_PASSWORD
+keyAlias=YOUR_KEY_ALIAS
+keyPassword=YOUR_KEY_PASSWORD
+```
+
+If `keystore.properties` is absent (e.g. a fresh clone), debug builds still work —
+only release signing is skipped. Keep the `.jks` keystore and its passwords backed up
+securely and out of version control.
+
 ## Permissions
 
 ScreenSlayer needs access to the images you select, the live-wallpaper service, and —
