@@ -5,23 +5,26 @@ A collection of Android applications (Kotlin / Jetpack Compose), each in its own
 ## Apps
 
 ### AL3RTED
-An alarm and alert manager app. Lets you create, edit, and schedule alerts that fire
-via Android's alarm system, with the service restarting on device boot.
+A loud, hard-to-miss alarm and alert app. Create scheduled alerts that fire full-screen
+over the lock screen, with boosted volume, custom vibration patterns, fade-in, snooze,
+and a strobe flashlight.
 
 - **Package:** `com.al3rted.app`
-- **Key parts:** alarm scheduling (`AlarmScheduler`, `AlarmReceiver`), boot persistence
-  (`BootReceiver`), foreground alerting (`AlertService`), and a Compose UI for the
-  alert list, editing, and settings.
+- **Highlights:** multiple named alerts with day-of-week repeat, 12h/24h time entry,
+  custom sound, volume up to 150% (boosted), Sound/Vibration/Screen alert types, five
+  vibration patterns, snooze, fade-in, and strobe flashlight.
+- **Full feature list:** [`AL3RTED/Al3rted/README.md`](AL3RTED/Al3rted/README.md)
 - **Location:** [`AL3RTED/Al3rted`](AL3RTED/Al3rted)
 
 ### ScreenSlayer
-A live wallpaper / wallpaper rotation app. Provides a live wallpaper engine plus
-scheduled wallpaper rotation, with lock-screen and preview settings.
+A live-wallpaper and wallpaper-rotation app. Build a library of wallpapers and have them
+rotate automatically on your lock screen — on unlock, on a shake, or at random.
 
 - **Package:** `com.mj.screenslayer`
-- **Key parts:** live wallpaper service (`ScreenSlayerLiveWallpaper`), rotation worker
-  (`WallpaperRotationWorker`), boot persistence (`BootReceiver`), and a Compose UI
-  (home, preview, wallpaper/lock-screen settings).
+- **Highlights:** wallpaper slot grid (1–1000 slots), single/multi/folder import, live
+  wallpaper engine, change-on-unlock and shake-to-change triggers, shuffle/sequential
+  order, scale/dim/grayscale appearance, and lock-screen timeout & tap-to-wake controls.
+- **Full feature list:** [`ScreenSlayer/README.md`](ScreenSlayer/README.md)
 - **Location:** [`ScreenSlayer`](ScreenSlayer)
 
 ## Building
