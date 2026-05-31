@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Bell body -->
+    <path
+        android:fillColor="#9C4FFF"
+        android:pathData="M54,16 C36,16 24,29 24,46 L24,66 L16,75 L92,75 L84,66 L84,46 C84,29 72,16 54,16 Z"/>
+
+    <!-- Bell bottom clapper knob -->
+    <path
+        android:fillColor="#9C4FFF"
+        android:pathData="M46,75 Q46,85 54,85 Q62,85 62,75 Z"/>
+
+    <!-- Clapper hole (background colour punch) -->
+    <path
+        android:fillColor="#1A0A2E"
+        android:pathData="M48,77 Q48,83 54,83 Q60,83 60,77 Z"/>
+
+    <!-- Lightning bolt (gold) -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M63,26 L47,53 L56,53 L43,80 L69,49 L59,49 Z"/>
+
+</vector>

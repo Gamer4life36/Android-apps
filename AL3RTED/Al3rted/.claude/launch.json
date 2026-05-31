@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "icon-preview",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "require('http').createServer((req,res)=>{res.writeHead(200,{'Content-Type':'text/html'});require('fs').createReadStream('C:/Users/MJ/AppData/Local/Temp/make_icons.html').pipe(res)}).listen(7788)"],
+      "port": 7788
+    }
+  ]
+}

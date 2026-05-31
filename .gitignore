@@ -1,0 +1,22 @@
+# ===== Secrets (NEVER commit) =====
+*.jks
+*.keystore
+KEYSTORE_CREDENTIALS.txt
+local.properties
+
+# ===== Build artifacts =====
+*.apk
+*.aab
+build/
+.gradle/
+*.iml
+captures/
+
+# ===== IDE / local =====
+.idea/
+settings.local.json
+**/.claude/settings.local.json
+.DS_Store
+
+# ===== Not part of this repo =====
+SC 1.0/
