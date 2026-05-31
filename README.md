@@ -21,9 +21,10 @@ A live-wallpaper and wallpaper-rotation app. Build a library of wallpapers and h
 rotate automatically on your lock screen — on unlock, on a shake, or at random.
 
 - **Package:** `com.mj.screenslayer`
-- **Highlights:** wallpaper slot grid (1–1000 slots), single/multi/folder import, live
-  wallpaper engine, change-on-unlock and shake-to-change triggers, shuffle/sequential
-  order, scale/dim/grayscale appearance, and lock-screen timeout & tap-to-wake controls.
+- **Highlights:** wallpaper slot grid (1–1000 slots), single/multi/folder import,
+  **animated GIF support**, live wallpaper engine, change-on-unlock and shake-to-change
+  triggers, shuffle/sequential order, scale/dim/grayscale appearance, and lock-screen
+  timeout & tap-to-wake controls.
 - **Full feature list:** [`ScreenSlayer/README.md`](ScreenSlayer/README.md)
 - **Location:** [`ScreenSlayer`](ScreenSlayer)
 

@@ -12,6 +12,11 @@ screen — on unlock, on a shake, or at random.
 - **Slot grid** — manage your wallpapers in a grid of slots (default 15, configurable
   from 1 up to 1000, with quick presets: 15, 25, 50, 100, 250, 500, 1000).
 - **Add images** — tap a slot to pick one image, or multi-select several at once.
+- **Animated GIF support** — GIFs are first-class. When ScreenSlayer is set as your
+  live wallpaper, GIFs play **animated** on the lock screen (via `AnimatedImageDrawable`
+  on Android 9+), with scale/dim/grayscale still applied. As a plain system wallpaper,
+  the raw GIF is streamed so OEMs that support it (e.g. Samsung One UI) animate it,
+  while others show the first frame.
 - **Import a folder** — bulk-import every image in a chosen folder into empty slots.
 - **Manage slots** — clear an individual slot or clear all slots at once (your original
   image files are never touched).
