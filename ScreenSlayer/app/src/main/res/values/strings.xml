@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ScreenSlayer</string>
+    <string name="wallpaper_description">Rotates your wallpaper collection on the lock screen</string>
+</resources>

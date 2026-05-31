@@ -2,6 +2,9 @@
 *.jks
 *.keystore
 KEYSTORE_CREDENTIALS.txt
+PASS.txt
+*PASS*.txt
+*password*.txt
 local.properties
 
 # ===== Build artifacts =====
