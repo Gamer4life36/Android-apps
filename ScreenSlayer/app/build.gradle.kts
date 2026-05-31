@@ -1,6 +1,17 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+}
+
+// Load signing credentials from keystore.properties (kept out of version control).
+// See keystore.properties.example for the expected format.
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties().apply {
+    if (keystorePropertiesFile.exists()) {
+        keystorePropertiesFile.inputStream().use { load(it) }
+    }
 }
 
 android {
@@ -16,11 +27,13 @@ android {
     }
 
     signingConfigs {
-        create("release") {
-            storeFile     = file("../screenslayer-release.jks")
-            storePassword = "ScreenSlayer2024"
-            keyAlias      = "screenslayer"
-            keyPassword   = "ScreenSlayer2024"
+        if (keystorePropertiesFile.exists()) {
+            create("release") {
+                storeFile     = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+                keyAlias      = keystoreProperties.getProperty("keyAlias")
+                keyPassword   = keystoreProperties.getProperty("keyPassword")
+            }
         }
     }
 
@@ -28,7 +41,9 @@ android {
         release {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            signingConfig = signingConfigs.getByName("release")
+            if (keystorePropertiesFile.exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
     compileOptions {

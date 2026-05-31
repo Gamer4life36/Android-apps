@@ -5,6 +5,7 @@ KEYSTORE_CREDENTIALS.txt
 PASS.txt
 *PASS*.txt
 *password*.txt
+keystore.properties
 local.properties
 
 # ===== Build artifacts =====
